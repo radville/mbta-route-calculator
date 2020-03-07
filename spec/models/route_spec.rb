@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Route, type: :model do
     it "has a name" do
-        route = Route.create!(name: "Alewife") # creating a new stop instance
-        expect(route.name).to eq("Alewife") # the expectation
+        route = Route.create!(name: "Green Line") # creating a new stop instance
+        expect(route.name).to eq("Green Line") # the expectation
     end
 end
