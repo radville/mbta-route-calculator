@@ -1,0 +1,9 @@
+class CreateRouteStops < ActiveRecord::Migration[5.1]
+  def change
+    create_table :route_stops do |t|
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end

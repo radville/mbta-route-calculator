@@ -1,11 +1,5 @@
-require "rails_helper"
-
-#  run with rspec spec/models/route_spec.rb
-
+require 'rails_helper'
 
 RSpec.describe Route, type: :model do
-  it "has a name" do 
-    route = Route.create!(name: "Green Line") # creating a new stop instance
-    expect(stop.name).to eq("Green Line") # the expectation
-  end
+  pending "add some examples to (or delete) #{__FILE__}"
 end

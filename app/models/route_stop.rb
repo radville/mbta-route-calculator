@@ -1,0 +1,2 @@
+class RouteStop < ApplicationRecord
+end
