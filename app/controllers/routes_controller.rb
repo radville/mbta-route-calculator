@@ -10,5 +10,8 @@ class RoutesController < ApplicationController
         @routes.each do |route|
             puts @routes
         end
+
+        # Get Route with the most stops
+        @most = Route.most
     end
 end

@@ -1212,3 +1212,1396 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 517ms (Views: 322.0ms | ActiveRecord: 11.0ms)
 
 
+  [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStop Load (41.4ms)[0m  [1m[34mSELECT  "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1 LIMIT $2[0m  [["route_id", 9], ["LIMIT", 11]]
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Alewife"], ["created_at", "2020-03-07 19:21:39.809353"], ["updated_at", "2020-03-07 19:21:39.809353"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 1], ["route_id", 9], ["created_at", "2020-03-07 19:21:39.830485"], ["updated_at", "2020-03-07 19:21:39.830485"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.7ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT  "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1 LIMIT $2[0m  [["route_id", 9], ["LIMIT", 11]]
+  [1m[36mRoute Load (3.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (1.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Alewife"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Davis"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Davis"], ["created_at", "2020-03-07 19:30:12.178055"], ["updated_at", "2020-03-07 19:30:12.178055"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 2], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.195328"], ["updated_at", "2020-03-07 19:30:12.195328"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Porter"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Porter"], ["created_at", "2020-03-07 19:30:12.214194"], ["updated_at", "2020-03-07 19:30:12.214194"]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 3], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.216450"], ["updated_at", "2020-03-07 19:30:12.216450"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Harvard"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harvard"], ["created_at", "2020-03-07 19:30:12.228356"], ["updated_at", "2020-03-07 19:30:12.228356"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 4], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.230889"], ["updated_at", "2020-03-07 19:30:12.230889"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Central"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Central"], ["created_at", "2020-03-07 19:30:12.241344"], ["updated_at", "2020-03-07 19:30:12.241344"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 5], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.244133"], ["updated_at", "2020-03-07 19:30:12.244133"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kendall/MIT"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kendall/MIT"], ["created_at", "2020-03-07 19:30:12.254066"], ["updated_at", "2020-03-07 19:30:12.254066"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 6], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.259811"], ["updated_at", "2020-03-07 19:30:12.259811"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Charles/MGH"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Charles/MGH"], ["created_at", "2020-03-07 19:30:12.265660"], ["updated_at", "2020-03-07 19:30:12.265660"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 7], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.268200"], ["updated_at", "2020-03-07 19:30:12.268200"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Park Street"], ["created_at", "2020-03-07 19:30:12.272761"], ["updated_at", "2020-03-07 19:30:12.272761"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 8], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.275029"], ["updated_at", "2020-03-07 19:30:12.275029"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Downtown Crossing"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Downtown Crossing"], ["created_at", "2020-03-07 19:30:12.280301"], ["updated_at", "2020-03-07 19:30:12.280301"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 9], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.282540"], ["updated_at", "2020-03-07 19:30:12.282540"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "South Station"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "South Station"], ["created_at", "2020-03-07 19:30:12.287665"], ["updated_at", "2020-03-07 19:30:12.287665"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 10], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.290625"], ["updated_at", "2020-03-07 19:30:12.290625"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Broadway"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Broadway"], ["created_at", "2020-03-07 19:30:12.296450"], ["updated_at", "2020-03-07 19:30:12.296450"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 11], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.298857"], ["updated_at", "2020-03-07 19:30:12.298857"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Andrew"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Andrew"], ["created_at", "2020-03-07 19:30:12.303514"], ["updated_at", "2020-03-07 19:30:12.303514"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 12], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.305743"], ["updated_at", "2020-03-07 19:30:12.305743"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "JFK/UMass"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "JFK/UMass"], ["created_at", "2020-03-07 19:30:12.313293"], ["updated_at", "2020-03-07 19:30:12.313293"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 13], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.315462"], ["updated_at", "2020-03-07 19:30:12.315462"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Savin Hill"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Savin Hill"], ["created_at", "2020-03-07 19:30:12.320071"], ["updated_at", "2020-03-07 19:30:12.320071"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 14], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.322319"], ["updated_at", "2020-03-07 19:30:12.322319"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fields Corner"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fields Corner"], ["created_at", "2020-03-07 19:30:12.327464"], ["updated_at", "2020-03-07 19:30:12.327464"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 15], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.329943"], ["updated_at", "2020-03-07 19:30:12.329943"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Shawmut"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shawmut"], ["created_at", "2020-03-07 19:30:12.334577"], ["updated_at", "2020-03-07 19:30:12.334577"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 16], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.336866"], ["updated_at", "2020-03-07 19:30:12.336866"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ashmont"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ashmont"], ["created_at", "2020-03-07 19:30:12.345703"], ["updated_at", "2020-03-07 19:30:12.345703"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 17], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.348164"], ["updated_at", "2020-03-07 19:30:12.348164"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Quincy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "North Quincy"], ["created_at", "2020-03-07 19:30:12.353318"], ["updated_at", "2020-03-07 19:30:12.353318"]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 18], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.355488"], ["updated_at", "2020-03-07 19:30:12.355488"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wollaston"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wollaston"], ["created_at", "2020-03-07 19:30:12.363235"], ["updated_at", "2020-03-07 19:30:12.363235"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 19], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.365555"], ["updated_at", "2020-03-07 19:30:12.365555"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Quincy Center"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Quincy Center"], ["created_at", "2020-03-07 19:30:12.371601"], ["updated_at", "2020-03-07 19:30:12.371601"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 20], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.377838"], ["updated_at", "2020-03-07 19:30:12.377838"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Quincy Adams"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Quincy Adams"], ["created_at", "2020-03-07 19:30:12.382534"], ["updated_at", "2020-03-07 19:30:12.382534"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 21], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.384813"], ["updated_at", "2020-03-07 19:30:12.384813"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Braintree"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Braintree"], ["created_at", "2020-03-07 19:30:12.389901"], ["updated_at", "2020-03-07 19:30:12.389901"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 22], ["route_id", 9], ["created_at", "2020-03-07 19:30:12.392752"], ["updated_at", "2020-03-07 19:30:12.392752"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ashmont"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Cedar Grove"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cedar Grove"], ["created_at", "2020-03-07 19:30:12.484687"], ["updated_at", "2020-03-07 19:30:12.484687"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 23], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.487654"], ["updated_at", "2020-03-07 19:30:12.487654"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Butler"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Butler"], ["created_at", "2020-03-07 19:30:12.497708"], ["updated_at", "2020-03-07 19:30:12.497708"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 24], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.500233"], ["updated_at", "2020-03-07 19:30:12.500233"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Milton"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Milton"], ["created_at", "2020-03-07 19:30:12.510284"], ["updated_at", "2020-03-07 19:30:12.510284"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 25], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.512718"], ["updated_at", "2020-03-07 19:30:12.512718"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Central Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Central Avenue"], ["created_at", "2020-03-07 19:30:12.518589"], ["updated_at", "2020-03-07 19:30:12.518589"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 26], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.521311"], ["updated_at", "2020-03-07 19:30:12.521311"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Valley Road"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Valley Road"], ["created_at", "2020-03-07 19:30:12.528340"], ["updated_at", "2020-03-07 19:30:12.528340"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 27], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.531256"], ["updated_at", "2020-03-07 19:30:12.531256"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Capen Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Capen Street"], ["created_at", "2020-03-07 19:30:12.536078"], ["updated_at", "2020-03-07 19:30:12.536078"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 28], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.538298"], ["updated_at", "2020-03-07 19:30:12.538298"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Mattapan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mattapan"], ["created_at", "2020-03-07 19:30:12.543496"], ["updated_at", "2020-03-07 19:30:12.543496"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 29], ["route_id", 10], ["created_at", "2020-03-07 19:30:12.545951"], ["updated_at", "2020-03-07 19:30:12.545951"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Forest Hills"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Forest Hills"], ["created_at", "2020-03-07 19:30:12.642153"], ["updated_at", "2020-03-07 19:30:12.642153"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 30], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.645067"], ["updated_at", "2020-03-07 19:30:12.645067"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Green Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Green Street"], ["created_at", "2020-03-07 19:30:12.650514"], ["updated_at", "2020-03-07 19:30:12.650514"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 31], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.653156"], ["updated_at", "2020-03-07 19:30:12.653156"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Stony Brook"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Stony Brook"], ["created_at", "2020-03-07 19:30:12.658353"], ["updated_at", "2020-03-07 19:30:12.658353"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 32], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.661032"], ["updated_at", "2020-03-07 19:30:12.661032"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Jackson Square"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jackson Square"], ["created_at", "2020-03-07 19:30:12.665532"], ["updated_at", "2020-03-07 19:30:12.665532"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 33], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.667987"], ["updated_at", "2020-03-07 19:30:12.667987"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Roxbury Crossing"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Roxbury Crossing"], ["created_at", "2020-03-07 19:30:12.672752"], ["updated_at", "2020-03-07 19:30:12.672752"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 34], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.676237"], ["updated_at", "2020-03-07 19:30:12.676237"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ruggles"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruggles"], ["created_at", "2020-03-07 19:30:12.684837"], ["updated_at", "2020-03-07 19:30:12.684837"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 35], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.687466"], ["updated_at", "2020-03-07 19:30:12.687466"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Massachusetts Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Massachusetts Avenue"], ["created_at", "2020-03-07 19:30:12.697356"], ["updated_at", "2020-03-07 19:30:12.697356"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 36], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.700145"], ["updated_at", "2020-03-07 19:30:12.700145"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Back Bay"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Back Bay"], ["created_at", "2020-03-07 19:30:12.710329"], ["updated_at", "2020-03-07 19:30:12.710329"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 37], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.712632"], ["updated_at", "2020-03-07 19:30:12.712632"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Tufts Medical Center"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tufts Medical Center"], ["created_at", "2020-03-07 19:30:12.718347"], ["updated_at", "2020-03-07 19:30:12.718347"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 38], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.721316"], ["updated_at", "2020-03-07 19:30:12.721316"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chinatown"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chinatown"], ["created_at", "2020-03-07 19:30:12.728966"], ["updated_at", "2020-03-07 19:30:12.728966"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 39], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.731117"], ["updated_at", "2020-03-07 19:30:12.731117"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Downtown Crossing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "State"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "State"], ["created_at", "2020-03-07 19:30:12.738605"], ["updated_at", "2020-03-07 19:30:12.738605"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 40], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.741139"], ["updated_at", "2020-03-07 19:30:12.741139"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Haymarket"], ["created_at", "2020-03-07 19:30:12.746205"], ["updated_at", "2020-03-07 19:30:12.746205"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 41], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.748608"], ["updated_at", "2020-03-07 19:30:12.748608"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "North Station"], ["created_at", "2020-03-07 19:30:12.759810"], ["updated_at", "2020-03-07 19:30:12.759810"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 42], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.762770"], ["updated_at", "2020-03-07 19:30:12.762770"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Community College"], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Community College"], ["created_at", "2020-03-07 19:30:12.772094"], ["updated_at", "2020-03-07 19:30:12.772094"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 43], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.778406"], ["updated_at", "2020-03-07 19:30:12.778406"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Sullivan Square"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sullivan Square"], ["created_at", "2020-03-07 19:30:12.783431"], ["updated_at", "2020-03-07 19:30:12.783431"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 44], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.786071"], ["updated_at", "2020-03-07 19:30:12.786071"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Assembly"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Assembly"], ["created_at", "2020-03-07 19:30:12.790412"], ["updated_at", "2020-03-07 19:30:12.790412"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 45], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.792994"], ["updated_at", "2020-03-07 19:30:12.792994"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wellington"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wellington"], ["created_at", "2020-03-07 19:30:12.798609"], ["updated_at", "2020-03-07 19:30:12.798609"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 46], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.801514"], ["updated_at", "2020-03-07 19:30:12.801514"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Malden Center"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Malden Center"], ["created_at", "2020-03-07 19:30:12.809909"], ["updated_at", "2020-03-07 19:30:12.809909"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 47], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.813453"], ["updated_at", "2020-03-07 19:30:12.813453"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Oak Grove"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Oak Grove"], ["created_at", "2020-03-07 19:30:12.818387"], ["updated_at", "2020-03-07 19:30:12.818387"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 48], ["route_id", 11], ["created_at", "2020-03-07 19:30:12.820735"], ["updated_at", "2020-03-07 19:30:12.820735"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston College"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boston College"], ["created_at", "2020-03-07 19:30:12.914897"], ["updated_at", "2020-03-07 19:30:12.914897"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 49], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.917364"], ["updated_at", "2020-03-07 19:30:12.917364"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "South Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "South Street"], ["created_at", "2020-03-07 19:30:12.922077"], ["updated_at", "2020-03-07 19:30:12.922077"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 50], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.924883"], ["updated_at", "2020-03-07 19:30:12.924883"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chestnut Hill Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chestnut Hill Avenue"], ["created_at", "2020-03-07 19:30:12.929445"], ["updated_at", "2020-03-07 19:30:12.929445"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 51], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.931628"], ["updated_at", "2020-03-07 19:30:12.931628"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chiswick Road"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chiswick Road"], ["created_at", "2020-03-07 19:30:12.936304"], ["updated_at", "2020-03-07 19:30:12.936304"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 52], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.938468"], ["updated_at", "2020-03-07 19:30:12.938468"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Sutherland Road"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sutherland Road"], ["created_at", "2020-03-07 19:30:12.943201"], ["updated_at", "2020-03-07 19:30:12.943201"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 53], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.945467"], ["updated_at", "2020-03-07 19:30:12.945467"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Washington Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Washington Street"], ["created_at", "2020-03-07 19:30:12.950747"], ["updated_at", "2020-03-07 19:30:12.950747"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 54], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.953801"], ["updated_at", "2020-03-07 19:30:12.953801"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Warren Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Warren Street"], ["created_at", "2020-03-07 19:30:12.964209"], ["updated_at", "2020-03-07 19:30:12.964209"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 55], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.966533"], ["updated_at", "2020-03-07 19:30:12.966533"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Allston Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Allston Street"], ["created_at", "2020-03-07 19:30:12.976420"], ["updated_at", "2020-03-07 19:30:12.976420"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 56], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.981754"], ["updated_at", "2020-03-07 19:30:12.981754"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Griggs Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Griggs Street"], ["created_at", "2020-03-07 19:30:12.986523"], ["updated_at", "2020-03-07 19:30:12.986523"]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 57], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.988803"], ["updated_at", "2020-03-07 19:30:12.988803"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Harvard Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harvard Avenue"], ["created_at", "2020-03-07 19:30:12.996535"], ["updated_at", "2020-03-07 19:30:12.996535"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 58], ["route_id", 12], ["created_at", "2020-03-07 19:30:12.998972"], ["updated_at", "2020-03-07 19:30:12.998972"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Packards Corner"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Packards Corner"], ["created_at", "2020-03-07 19:30:13.003649"], ["updated_at", "2020-03-07 19:30:13.003649"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 59], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.005930"], ["updated_at", "2020-03-07 19:30:13.005930"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Babcock Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Babcock Street"], ["created_at", "2020-03-07 19:30:13.013456"], ["updated_at", "2020-03-07 19:30:13.013456"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 60], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.015767"], ["updated_at", "2020-03-07 19:30:13.015767"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Pleasant Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pleasant Street"], ["created_at", "2020-03-07 19:30:13.020764"], ["updated_at", "2020-03-07 19:30:13.020764"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 61], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.026831"], ["updated_at", "2020-03-07 19:30:13.026831"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Paul Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Saint Paul Street"], ["created_at", "2020-03-07 19:30:13.032248"], ["updated_at", "2020-03-07 19:30:13.032248"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 62], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.036369"], ["updated_at", "2020-03-07 19:30:13.036369"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University West"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boston University West"], ["created_at", "2020-03-07 19:30:13.045300"], ["updated_at", "2020-03-07 19:30:13.045300"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 63], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.047818"], ["updated_at", "2020-03-07 19:30:13.047818"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University Central"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boston University Central"], ["created_at", "2020-03-07 19:30:13.052475"], ["updated_at", "2020-03-07 19:30:13.052475"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 64], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.054671"], ["updated_at", "2020-03-07 19:30:13.054671"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University East"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boston University East"], ["created_at", "2020-03-07 19:30:13.059912"], ["updated_at", "2020-03-07 19:30:13.059912"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 65], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.062439"], ["updated_at", "2020-03-07 19:30:13.062439"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Blandford Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Blandford Street"], ["created_at", "2020-03-07 19:30:13.066998"], ["updated_at", "2020-03-07 19:30:13.066998"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 66], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.069283"], ["updated_at", "2020-03-07 19:30:13.069283"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kenmore"], ["created_at", "2020-03-07 19:30:13.075815"], ["updated_at", "2020-03-07 19:30:13.075815"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 67], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.079276"], ["updated_at", "2020-03-07 19:30:13.079276"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hynes Convention Center"], ["created_at", "2020-03-07 19:30:13.084923"], ["updated_at", "2020-03-07 19:30:13.084923"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 68], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.087698"], ["updated_at", "2020-03-07 19:30:13.087698"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Copley"], ["created_at", "2020-03-07 19:30:13.096431"], ["updated_at", "2020-03-07 19:30:13.096431"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 69], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.099036"], ["updated_at", "2020-03-07 19:30:13.099036"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Arlington"], ["created_at", "2020-03-07 19:30:13.103848"], ["updated_at", "2020-03-07 19:30:13.103848"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 70], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.106094"], ["updated_at", "2020-03-07 19:30:13.106094"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boylston"], ["created_at", "2020-03-07 19:30:13.110780"], ["updated_at", "2020-03-07 19:30:13.110780"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 71], ["route_id", 12], ["created_at", "2020-03-07 19:30:13.113049"], ["updated_at", "2020-03-07 19:30:13.113049"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Cleveland Circle"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cleveland Circle"], ["created_at", "2020-03-07 19:30:13.252108"], ["updated_at", "2020-03-07 19:30:13.252108"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 72], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.255139"], ["updated_at", "2020-03-07 19:30:13.255139"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Englewood Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Englewood Avenue"], ["created_at", "2020-03-07 19:30:13.264589"], ["updated_at", "2020-03-07 19:30:13.264589"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 73], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.267006"], ["updated_at", "2020-03-07 19:30:13.267006"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Dean Road"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dean Road"], ["created_at", "2020-03-07 19:30:13.276050"], ["updated_at", "2020-03-07 19:30:13.276050"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 74], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.278832"], ["updated_at", "2020-03-07 19:30:13.278832"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Tappan Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tappan Street"], ["created_at", "2020-03-07 19:30:13.283742"], ["updated_at", "2020-03-07 19:30:13.283742"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 75], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.287154"], ["updated_at", "2020-03-07 19:30:13.287154"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Washington Square"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Washington Square"], ["created_at", "2020-03-07 19:30:13.292493"], ["updated_at", "2020-03-07 19:30:13.292493"]]
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 76], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.295225"], ["updated_at", "2020-03-07 19:30:13.295225"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fairbanks Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fairbanks Street"], ["created_at", "2020-03-07 19:30:13.305141"], ["updated_at", "2020-03-07 19:30:13.305141"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 77], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.310366"], ["updated_at", "2020-03-07 19:30:13.310366"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brandon Hall"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brandon Hall"], ["created_at", "2020-03-07 19:30:13.316128"], ["updated_at", "2020-03-07 19:30:13.316128"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 78], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.318592"], ["updated_at", "2020-03-07 19:30:13.318592"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Summit Avenue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Summit Avenue"], ["created_at", "2020-03-07 19:30:13.324619"], ["updated_at", "2020-03-07 19:30:13.324619"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 79], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.328658"], ["updated_at", "2020-03-07 19:30:13.328658"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Coolidge Corner"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Coolidge Corner"], ["created_at", "2020-03-07 19:30:13.333815"], ["updated_at", "2020-03-07 19:30:13.333815"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 80], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.336365"], ["updated_at", "2020-03-07 19:30:13.336365"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Paul Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kent Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kent Street"], ["created_at", "2020-03-07 19:30:13.347631"], ["updated_at", "2020-03-07 19:30:13.347631"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 81], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.349790"], ["updated_at", "2020-03-07 19:30:13.349790"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hawes Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hawes Street"], ["created_at", "2020-03-07 19:30:13.354502"], ["updated_at", "2020-03-07 19:30:13.354502"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 82], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.357605"], ["updated_at", "2020-03-07 19:30:13.357605"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Marys Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Saint Marys Street"], ["created_at", "2020-03-07 19:30:13.362300"], ["updated_at", "2020-03-07 19:30:13.362300"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 83], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.364912"], ["updated_at", "2020-03-07 19:30:13.364912"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Government Center"], ["created_at", "2020-03-07 19:30:13.388160"], ["updated_at", "2020-03-07 19:30:13.388160"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 84], ["route_id", 13], ["created_at", "2020-03-07 19:30:13.392892"], ["updated_at", "2020-03-07 19:30:13.392892"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fenway"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fenway"], ["created_at", "2020-03-07 19:30:13.513714"], ["updated_at", "2020-03-07 19:30:13.513714"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 85], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.516164"], ["updated_at", "2020-03-07 19:30:13.516164"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Longwood"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Longwood"], ["created_at", "2020-03-07 19:30:13.520859"], ["updated_at", "2020-03-07 19:30:13.520859"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 86], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.523664"], ["updated_at", "2020-03-07 19:30:13.523664"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brookline Village"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brookline Village"], ["created_at", "2020-03-07 19:30:13.530134"], ["updated_at", "2020-03-07 19:30:13.530134"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 87], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.532739"], ["updated_at", "2020-03-07 19:30:13.532739"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brookline Hills"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brookline Hills"], ["created_at", "2020-03-07 19:30:13.545975"], ["updated_at", "2020-03-07 19:30:13.545975"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 88], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.548264"], ["updated_at", "2020-03-07 19:30:13.548264"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Beaconsfield"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beaconsfield"], ["created_at", "2020-03-07 19:30:13.559391"], ["updated_at", "2020-03-07 19:30:13.559391"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 89], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.561830"], ["updated_at", "2020-03-07 19:30:13.561830"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Reservoir"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Reservoir"], ["created_at", "2020-03-07 19:30:13.567411"], ["updated_at", "2020-03-07 19:30:13.567411"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 90], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.570683"], ["updated_at", "2020-03-07 19:30:13.570683"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chestnut Hill"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chestnut Hill"], ["created_at", "2020-03-07 19:30:13.578659"], ["updated_at", "2020-03-07 19:30:13.578659"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 91], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.581194"], ["updated_at", "2020-03-07 19:30:13.581194"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Newton Centre"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Newton Centre"], ["created_at", "2020-03-07 19:30:13.585910"], ["updated_at", "2020-03-07 19:30:13.585910"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 92], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.588210"], ["updated_at", "2020-03-07 19:30:13.588210"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Newton Highlands"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Newton Highlands"], ["created_at", "2020-03-07 19:30:13.593174"], ["updated_at", "2020-03-07 19:30:13.593174"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 93], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.595771"], ["updated_at", "2020-03-07 19:30:13.595771"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Eliot"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eliot"], ["created_at", "2020-03-07 19:30:13.602562"], ["updated_at", "2020-03-07 19:30:13.602562"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 94], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.604732"], ["updated_at", "2020-03-07 19:30:13.604732"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Waban"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Waban"], ["created_at", "2020-03-07 19:30:13.613898"], ["updated_at", "2020-03-07 19:30:13.613898"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 95], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.616245"], ["updated_at", "2020-03-07 19:30:13.616245"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Woodland"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Woodland"], ["created_at", "2020-03-07 19:30:13.621128"], ["updated_at", "2020-03-07 19:30:13.621128"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 96], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.623329"], ["updated_at", "2020-03-07 19:30:13.623329"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Riverside"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Riverside"], ["created_at", "2020-03-07 19:30:13.630720"], ["updated_at", "2020-03-07 19:30:13.630720"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 97], ["route_id", 14], ["created_at", "2020-03-07 19:30:13.633102"], ["updated_at", "2020-03-07 19:30:13.633102"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Heath Street"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heath Street"], ["created_at", "2020-03-07 19:30:13.732044"], ["updated_at", "2020-03-07 19:30:13.732044"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 98], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.734641"], ["updated_at", "2020-03-07 19:30:13.734641"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Back of the Hill"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Back of the Hill"], ["created_at", "2020-03-07 19:30:13.739692"], ["updated_at", "2020-03-07 19:30:13.739692"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 99], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.742041"], ["updated_at", "2020-03-07 19:30:13.742041"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Riverway"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Riverway"], ["created_at", "2020-03-07 19:30:13.747045"], ["updated_at", "2020-03-07 19:30:13.747045"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 100], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.749282"], ["updated_at", "2020-03-07 19:30:13.749282"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Mission Park"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mission Park"], ["created_at", "2020-03-07 19:30:13.754122"], ["updated_at", "2020-03-07 19:30:13.754122"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 101], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.757336"], ["updated_at", "2020-03-07 19:30:13.757336"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fenwood Road"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fenwood Road"], ["created_at", "2020-03-07 19:30:13.762452"], ["updated_at", "2020-03-07 19:30:13.762452"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 102], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.765555"], ["updated_at", "2020-03-07 19:30:13.765555"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brigham Circle"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brigham Circle"], ["created_at", "2020-03-07 19:30:13.771319"], ["updated_at", "2020-03-07 19:30:13.771319"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 103], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.775849"], ["updated_at", "2020-03-07 19:30:13.775849"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Longwood Medical Area"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Longwood Medical Area"], ["created_at", "2020-03-07 19:30:13.782328"], ["updated_at", "2020-03-07 19:30:13.782328"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 104], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.784620"], ["updated_at", "2020-03-07 19:30:13.784620"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Museum of Fine Arts"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Museum of Fine Arts"], ["created_at", "2020-03-07 19:30:13.789452"], ["updated_at", "2020-03-07 19:30:13.789452"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 105], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.792304"], ["updated_at", "2020-03-07 19:30:13.792304"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Northeastern University"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Northeastern University"], ["created_at", "2020-03-07 19:30:13.799895"], ["updated_at", "2020-03-07 19:30:13.799895"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 106], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.802490"], ["updated_at", "2020-03-07 19:30:13.802490"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Symphony"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Symphony"], ["created_at", "2020-03-07 19:30:13.808512"], ["updated_at", "2020-03-07 19:30:13.808512"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 107], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.810974"], ["updated_at", "2020-03-07 19:30:13.810974"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Prudential"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Prudential"], ["created_at", "2020-03-07 19:30:13.816067"], ["updated_at", "2020-03-07 19:30:13.816067"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 108], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.818511"], ["updated_at", "2020-03-07 19:30:13.818511"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Science Park/West End"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Science Park/West End"], ["created_at", "2020-03-07 19:30:13.849575"], ["updated_at", "2020-03-07 19:30:13.849575"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 109], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.853201"], ["updated_at", "2020-03-07 19:30:13.853201"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Lechmere"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lechmere"], ["created_at", "2020-03-07 19:30:13.862272"], ["updated_at", "2020-03-07 19:30:13.862272"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 110], ["route_id", 15], ["created_at", "2020-03-07 19:30:13.864619"], ["updated_at", "2020-03-07 19:30:13.864619"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Bowdoin"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bowdoin"], ["created_at", "2020-03-07 19:30:13.958463"], ["updated_at", "2020-03-07 19:30:13.958463"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 111], ["route_id", 16], ["created_at", "2020-03-07 19:30:13.961401"], ["updated_at", "2020-03-07 19:30:13.961401"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "State"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Aquarium"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Aquarium"], ["created_at", "2020-03-07 19:30:13.972261"], ["updated_at", "2020-03-07 19:30:13.972261"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 112], ["route_id", 16], ["created_at", "2020-03-07 19:30:13.974615"], ["updated_at", "2020-03-07 19:30:13.974615"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Maverick"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Maverick"], ["created_at", "2020-03-07 19:30:13.979302"], ["updated_at", "2020-03-07 19:30:13.979302"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 113], ["route_id", 16], ["created_at", "2020-03-07 19:30:13.981882"], ["updated_at", "2020-03-07 19:30:13.981882"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Airport"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Airport"], ["created_at", "2020-03-07 19:30:13.986581"], ["updated_at", "2020-03-07 19:30:13.986581"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 114], ["route_id", 16], ["created_at", "2020-03-07 19:30:13.988913"], ["updated_at", "2020-03-07 19:30:13.988913"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wood Island"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wood Island"], ["created_at", "2020-03-07 19:30:13.996864"], ["updated_at", "2020-03-07 19:30:13.996864"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 115], ["route_id", 16], ["created_at", "2020-03-07 19:30:13.999883"], ["updated_at", "2020-03-07 19:30:13.999883"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Orient Heights"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Orient Heights"], ["created_at", "2020-03-07 19:30:14.004769"], ["updated_at", "2020-03-07 19:30:14.004769"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 116], ["route_id", 16], ["created_at", "2020-03-07 19:30:14.008610"], ["updated_at", "2020-03-07 19:30:14.008610"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Suffolk Downs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Suffolk Downs"], ["created_at", "2020-03-07 19:30:14.015675"], ["updated_at", "2020-03-07 19:30:14.015675"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 117], ["route_id", 16], ["created_at", "2020-03-07 19:30:14.018096"], ["updated_at", "2020-03-07 19:30:14.018096"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Beachmont"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beachmont"], ["created_at", "2020-03-07 19:30:14.024145"], ["updated_at", "2020-03-07 19:30:14.024145"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 118], ["route_id", 16], ["created_at", "2020-03-07 19:30:14.027238"], ["updated_at", "2020-03-07 19:30:14.027238"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Revere Beach"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Revere Beach"], ["created_at", "2020-03-07 19:30:14.031927"], ["updated_at", "2020-03-07 19:30:14.031927"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 119], ["route_id", 16], ["created_at", "2020-03-07 19:30:14.034979"], ["updated_at", "2020-03-07 19:30:14.034979"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (6.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wonderland"], ["LIMIT", 1]]
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "stops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wonderland"], ["created_at", "2020-03-07 19:30:14.047207"], ["updated_at", "2020-03-07 19:30:14.047207"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "route_stops" ("stop_id", "route_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stop_id", 120], ["route_id", 16], ["created_at", "2020-03-07 19:30:14.054894"], ["updated_at", "2020-03-07 19:30:14.054894"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (1.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Alewife"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Davis"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Porter"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Harvard"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Central"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kendall/MIT"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Charles/MGH"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Downtown Crossing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "South Station"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Broadway"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Andrew"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "JFK/UMass"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Savin Hill"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fields Corner"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Shawmut"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ashmont"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Quincy"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wollaston"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Quincy Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Quincy Adams"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Braintree"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ashmont"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Cedar Grove"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Butler"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Milton"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Central Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Valley Road"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Capen Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Forest Hills"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Green Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Stony Brook"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Jackson Square"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Roxbury Crossing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Ruggles"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Massachusetts Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Back Bay"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Tufts Medical Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chinatown"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Downtown Crossing"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "State"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Community College"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Sullivan Square"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Assembly"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wellington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Malden Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Oak Grove"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston College"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "South Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chestnut Hill Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chiswick Road"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Sutherland Road"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Washington Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Warren Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Allston Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Griggs Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Harvard Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Packards Corner"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Babcock Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Pleasant Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Paul Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University West"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University Central"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boston University East"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Blandford Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Cleveland Circle"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Englewood Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Dean Road"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Tappan Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Washington Square"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fairbanks Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brandon Hall"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Summit Avenue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Coolidge Corner"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Paul Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kent Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hawes Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Saint Marys Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Hynes Convention Center"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Kenmore"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fenway"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Longwood"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brookline Village"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brookline Hills"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Beaconsfield"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Reservoir"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Chestnut Hill"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Newton Centre"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Newton Highlands"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Eliot"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Waban"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Woodland"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Riverside"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Heath Street"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Back of the Hill"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Riverway"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Mission Park"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Fenwood Road"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Brigham Circle"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Longwood Medical Area"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Museum of Fine Arts"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Northeastern University"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Symphony"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Prudential"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Copley"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Arlington"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Boylston"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Park Street"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Haymarket"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "North Station"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Science Park/West End"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Lechmere"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Bowdoin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Government Center"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "State"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Aquarium"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Maverick"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Airport"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wood Island"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Orient Heights"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Suffolk Downs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Beachmont"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Revere Beach"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStop Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stops" WHERE "stops"."name" = $1 LIMIT $2[0m  [["name", "Wonderland"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.7ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+Started GET "/routes" for ::1 at 2020-03-07 14:32:12 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.7ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered routes/index.html.erb within layouts/application (75.7ms)
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 13.9ms)
+
+
+  
+ActionView::Template::Error (compared with non class/module):
+     7: </ul>
+     8: 
+     9: <h2>Subway Route with the most stops</h2>
+    10: <%= Route.most %>
+  
+app/models/route.rb:21:in `get_stops'
+app/models/route.rb:36:in `most'
+app/views/routes/index.html.erb:10:in `_app_views_routes_index_html_erb__493416956724981129_70307141424220'
+Started GET "/routes" for ::1 at 2020-03-07 14:33:16 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (1.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.7ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (1.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  Rendered routes/index.html.erb within layouts/application (95.5ms)
+Completed 200 OK in 363ms (Views: 199.7ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 14:33:31 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.7ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.6ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  Rendered routes/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 209ms (Views: 82.5ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 14:34:35 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (6.7ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 298ms (Views: 80.0ms | ActiveRecord: 29.9ms)
+
+

@@ -16,8 +16,26 @@ class Route < ApplicationRecord
         end
     end
 
+    # fetch data about all stops at each Route
+    def self.get_stops
+        if Route.all.first.stops.size < 1
+            self.all.each do |route|
+                stops_response = RestClient.get("https://api-v3.mbta.com/stops?filter[route]=#{route.mbta_id}&api_key=#{ENV['MBTA_KEY']}")
+
+                stops_data = JSON.parse(stops_response)["data"]
+
+                stops_data.each do |stop| 
+                    route.stops.create(name: stop["attributes"]["name"])
+                end
+            end
+        end
+    end
+
     # Calculate Route with most stops
     def self.most 
-        self.sort_by{ |route| route.stops.length }[0]
+        self.get_stops
+        self.all.sort_by{ |route| route.stops.length }[-1]
     end
+
+
 end
