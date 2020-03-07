@@ -19035,3 +19035,192 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 492ms (Views: 229.1ms | ActiveRecord: 71.3ms)
 
 
+Started GET "/" for ::1 at 2020-03-07 16:52:00 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 130ms (Views: 121.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=train&commit=Search" for ::1 at 2020-03-07 16:52:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q=train&commit=Search" for ::1 at 2020-03-07 16:52:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q=train&commit=Search" for ::1 at 2020-03-07 16:52:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q=train&commit=Search" for ::1 at 2020-03-07 16:53:58 -0500
+Processing by StopsController#calculate as JS
+  Parameters: {"utf8"=>"✓", "q"=>"train", "commit"=>"Search"}
+  Rendering stops/calculate.html.erb within layouts/application
+  Rendered stops/calculate.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 204ms (Views: 176.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 16:54:57 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 16:55:20 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 16:58:12 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 5..7)):
+     6:   <%= text_field_tag(:first_stop) %>
+     7:   <%= label_tag(:first_stop, "to:") %>  
+     8:   <%= text_field_tag(:first_stop) %>
+     9:   <%= collection_select(:stop, Stop.all, :id, :name) %>
+    10:   <%= submit_tag("Search") %>
+    11: <% end %>
+  
+app/views/application/index.html.erb:9:in `block in _app_views_application_index_html_erb___2488615739433782181_70233927846900'
+app/views/application/index.html.erb:4:in `_app_views_application_index_html_erb___2488615739433782181_70233927846900'
+Started GET "/" for ::1 at 2020-03-07 16:59:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mStop Load (0.8ms)[0m  [1m[34mSELECT "stops".* FROM "stops"[0m
+  Rendered application/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 139ms (Views: 130.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&first_stop=&first_stop=&route%5Bstop_id%5D=121&commit=Search" for ::1 at 2020-03-07 16:59:53 -0500
+Processing by StopsController#calculate as JS
+  Parameters: {"utf8"=>"✓", "first_stop"=>"", "route"=>{"stop_id"=>"121"}, "commit"=>"Search"}
+  Rendering stops/calculate.html.erb within layouts/application
+  Rendered stops/calculate.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 141ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&first_stop=&first_stop=&route%5Bstop_id%5D=121&commit=Search" for ::1 at 2020-03-07 17:00:23 -0500
+Processing by StopsController#calculate as JS
+  Parameters: {"utf8"=>"✓", "first_stop"=>"", "route"=>{"stop_id"=>"121"}, "commit"=>"Search"}
+  Rendering stops/calculate.html.erb within layouts/application
+  Rendered stops/calculate.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 102ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&first_stop=&first_stop=&route%5Bstop_id%5D=122&commit=Search" for ::1 at 2020-03-07 17:00:41 -0500
+Processing by StopsController#calculate as JS
+  Parameters: {"utf8"=>"✓", "first_stop"=>"", "route"=>{"stop_id"=>"122"}, "commit"=>"Search"}
+  Rendering stops/calculate.html.erb within layouts/application
+  Rendered stops/calculate.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 81ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 17:01:17 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mStop Load (0.8ms)[0m  [1m[34mSELECT "stops".* FROM "stops"[0m
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops"[0m
+  Rendered application/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&stop_1%5Bstop_id%5D=121&stop_2%5Bstop_id%5D=141&commit=Search" for ::1 at 2020-03-07 17:01:21 -0500
+Processing by StopsController#calculate as JS
+  Parameters: {"utf8"=>"✓", "stop_1"=>{"stop_id"=>"121"}, "stop_2"=>{"stop_id"=>"141"}, "commit"=>"Search"}
+  Rendering stops/calculate.html.erb within layouts/application
+  Rendered stops/calculate.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
