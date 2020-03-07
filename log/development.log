@@ -2605,3 +2605,107 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 298ms (Views: 80.0ms | ActiveRecord: 29.9ms)
 
 
+Started GET "/routes" for ::1 at 2020-03-07 14:39:29 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.4ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mCACHE Stop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 375ms (Views: 98.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 14:39:40 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mStop Load (0.5ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mStop Load (0.2ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  [1m[36mCACHE Route Load (0.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 9]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 10]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 11]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 12]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 13]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 14]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 15]]
+  [1m[36mCACHE Stop Load (0.0ms)[0m  [1m[34mSELECT "stops".* FROM "stops" INNER JOIN "route_stops" ON "stops"."id" = "route_stops"."stop_id" WHERE "route_stops"."route_id" = $1[0m  [["route_id", 16]]
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 219ms (Views: 63.3ms | ActiveRecord: 8.5ms)
+
+

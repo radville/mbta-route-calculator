@@ -37,5 +37,9 @@ class Route < ApplicationRecord
         self.all.sort_by{ |route| route.stops.length }[-1]
     end
 
+    def self.fewest
+        self.all.sort_by{ |route| route.stops.length }[0]
+    end
+
 
 end

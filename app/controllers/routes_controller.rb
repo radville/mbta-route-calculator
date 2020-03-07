@@ -13,5 +13,8 @@ class RoutesController < ApplicationController
 
         # Get Route with the most stops
         @most = Route.most
+
+        # Get Route with the fewest stops
+        @fewest = Route.fewest
     end
 end
