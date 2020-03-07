@@ -1,5 +1,7 @@
 <h1>Subway Routes</h1>
 
-<% @routes.each do |route| %>
-    <%= route.name %>
-<% end %>
+<ul>
+    <% @routes.each do |route| %>
+        <li><%= route %></li>
+    <% end %>
+</ul>
