@@ -7,4 +7,10 @@ RSpec.describe Route, type: :model do
         route = Route.create!(name: "Green Line") # creating a new route instance
         expect(route.name).to eq("Green Line") # the expectation
     end
+
+    it "has stops" do
+        route = Route.create!(name: "Blue Line")
+        route.stops.build(name: "Wonderland") 
+        expect(route.stops.first.name).to eq("Wonderland")
+    end
 end
