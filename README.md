@@ -2,11 +2,10 @@
 
 This application retrieves data from the MBTA API and displays it at localhost:3000.
 
+Created in Ruby 2.6.1. 
+
 ### Decisions
 To see all MBTA light rail and heavy rail routes, go to localhost:3000/routes. I pull only these two types of routes when I make the request from https://api-v3.mbta.com/routes?filter[type]=0,1. Without filtering the request, it pulls much more data than is necessary for this application.
-
-
-Created in Ruby 2.6.1. 
 
 ### Installing
 
