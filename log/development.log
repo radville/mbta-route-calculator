@@ -665,3 +665,394 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 211ms (Views: 111.5ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mRoute Load (4.4ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.1ms)[0m  [1m[31mDELETE FROM "routes" WHERE "routes"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStop Load (24.4ms)[0m  [1m[34mSELECT  "stops".* FROM "stops" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT  "stops".* FROM "stops" ORDER BY "stops"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "stops" WHERE "stops"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStop Load (0.3ms)[0m  [1m[34mSELECT  "stops".* FROM "stops" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/routes" for ::1 at 2020-03-07 13:42:35 -0500
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 268ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMbtaIdToRoutes (20200307184801)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.2ms)[0m  [1m[35mALTER TABLE "routes" ADD "mbta_id" integer[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307184801"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/routes" for ::1 at 2020-03-07 13:48:38 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (48.2ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Line"], ["created_at", "2020-03-07 18:48:38.235069"], ["updated_at", "2020-03-07 18:48:38.235069"], ["mbta_id", 0]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mattapan Trolley"], ["created_at", "2020-03-07 18:48:38.289066"], ["updated_at", "2020-03-07 18:48:38.289066"], ["mbta_id", 0]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orange Line"], ["created_at", "2020-03-07 18:48:38.292707"], ["updated_at", "2020-03-07 18:48:38.292707"], ["mbta_id", 0]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line B"], ["created_at", "2020-03-07 18:48:38.296370"], ["updated_at", "2020-03-07 18:48:38.296370"], ["mbta_id", 0]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line C"], ["created_at", "2020-03-07 18:48:38.300072"], ["updated_at", "2020-03-07 18:48:38.300072"], ["mbta_id", 0]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line D"], ["created_at", "2020-03-07 18:48:38.303557"], ["updated_at", "2020-03-07 18:48:38.303557"], ["mbta_id", 0]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line E"], ["created_at", "2020-03-07 18:48:38.306718"], ["updated_at", "2020-03-07 18:48:38.306718"], ["mbta_id", 0]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Blue Line"], ["created_at", "2020-03-07 18:48:38.310692"], ["updated_at", "2020-03-07 18:48:38.310692"], ["mbta_id", 0]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (1.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 317ms (Views: 82.7ms | ActiveRecord: 77.1ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 13:49:10 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Line"], ["created_at", "2020-03-07 18:49:10.722207"], ["updated_at", "2020-03-07 18:49:10.722207"], ["mbta_id", 0]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mattapan Trolley"], ["created_at", "2020-03-07 18:49:10.730311"], ["updated_at", "2020-03-07 18:49:10.730311"], ["mbta_id", 0]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orange Line"], ["created_at", "2020-03-07 18:49:10.738934"], ["updated_at", "2020-03-07 18:49:10.738934"], ["mbta_id", 0]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line B"], ["created_at", "2020-03-07 18:49:10.742505"], ["updated_at", "2020-03-07 18:49:10.742505"], ["mbta_id", 0]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line C"], ["created_at", "2020-03-07 18:49:10.746020"], ["updated_at", "2020-03-07 18:49:10.746020"], ["mbta_id", 0]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line D"], ["created_at", "2020-03-07 18:49:10.750792"], ["updated_at", "2020-03-07 18:49:10.750792"], ["mbta_id", 0]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line E"], ["created_at", "2020-03-07 18:49:10.754291"], ["updated_at", "2020-03-07 18:49:10.754291"], ["mbta_id", 0]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Blue Line"], ["created_at", "2020-03-07 18:49:10.758175"], ["updated_at", "2020-03-07 18:49:10.758175"], ["mbta_id", 0]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 230ms (Views: 74.2ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 13:49:20 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Line"], ["created_at", "2020-03-07 18:49:20.922336"], ["updated_at", "2020-03-07 18:49:20.922336"], ["mbta_id", 0]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mattapan Trolley"], ["created_at", "2020-03-07 18:49:20.928832"], ["updated_at", "2020-03-07 18:49:20.928832"], ["mbta_id", 0]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orange Line"], ["created_at", "2020-03-07 18:49:20.932252"], ["updated_at", "2020-03-07 18:49:20.932252"], ["mbta_id", 0]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line B"], ["created_at", "2020-03-07 18:49:20.935940"], ["updated_at", "2020-03-07 18:49:20.935940"], ["mbta_id", 0]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line C"], ["created_at", "2020-03-07 18:49:20.939402"], ["updated_at", "2020-03-07 18:49:20.939402"], ["mbta_id", 0]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line D"], ["created_at", "2020-03-07 18:49:20.948423"], ["updated_at", "2020-03-07 18:49:20.948423"], ["mbta_id", 0]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line E"], ["created_at", "2020-03-07 18:49:20.957014"], ["updated_at", "2020-03-07 18:49:20.957014"], ["mbta_id", 0]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Blue Line"], ["created_at", "2020-03-07 18:49:20.966218"], ["updated_at", "2020-03-07 18:49:20.966218"], ["mbta_id", 0]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 188ms (Views: 33.8ms | ActiveRecord: 33.3ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8627.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mbta-route-calculator_development"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (37.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mbta-route-calculator_development"[0m
+  [1m[35m (57.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mbta-route-calculator_test"[0m
+  [1m[35m (27.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRoutes (20200307164052)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.3ms)[0m  [1m[35mCREATE TABLE "routes" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164052"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStops (20200307164109)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "stops" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164109"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRouteStops (20200307164232)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "route_stops" ("id" bigserial primary key, "stop_id" integer, "route_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164232"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddMbtaIdToRoutes (20200307184801)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "routes" ADD "mbta_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307184801"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-07 18:53:00.597452"], ["updated_at", "2020-03-07 18:53:00.597452"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRoute Load (1.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/routes" for ::1 at 2020-03-07 13:55:11 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Line"], ["created_at", "2020-03-07 18:55:12.395804"], ["updated_at", "2020-03-07 18:55:12.395804"], ["mbta_id", 0]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 818ms (Views: 593.7ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 13:55:16 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 158ms (Views: 35.6ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 13:56:09 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", 0], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMbtaIdNumberToProducts (20200307185831)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mALTER TABLE "products" ADD "mbta_id" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMbtaIdNumberToProducts (20200307185831)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "products" ADD "mbta_id" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMbtaIdToRoutes (20200307185943)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "routes" ADD "mbta_id" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (44.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mbta-route-calculator_development"[0m
+  [1m[35m (54.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mbta-route-calculator_test"[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4669063408788268035)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRoutes (20200307164052)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "routes" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164052"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStops (20200307164109)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "stops" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164109"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRouteStops (20200307164232)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "route_stops" ("id" bigserial primary key, "stop_id" integer, "route_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307164232"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddMbtaIdToRoutes (20200307185943)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "routes" ADD "mbta_id" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200307185943"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-07 19:00:26.725679"], ["updated_at", "2020-03-07 19:00:26.725679"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4669063408788268035)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/routes" for ::1 at 2020-03-07 14:00:45 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutesController#index as HTML
+Started GET "/routes" for ::1 at 2020-03-07 14:01:12 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Line"], ["created_at", "2020-03-07 19:01:12.691058"], ["updated_at", "2020-03-07 19:01:12.691058"], ["mbta_id", "Red"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mattapan Trolley"], ["created_at", "2020-03-07 19:01:12.700940"], ["updated_at", "2020-03-07 19:01:12.700940"], ["mbta_id", "Mattapan"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Orange Line"], ["created_at", "2020-03-07 19:01:12.709307"], ["updated_at", "2020-03-07 19:01:12.709307"], ["mbta_id", "Orange"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line B"], ["created_at", "2020-03-07 19:01:12.718778"], ["updated_at", "2020-03-07 19:01:12.718778"], ["mbta_id", "Green-B"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line C"], ["created_at", "2020-03-07 19:01:12.724684"], ["updated_at", "2020-03-07 19:01:12.724684"], ["mbta_id", "Green-C"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line D"], ["created_at", "2020-03-07 19:01:12.729421"], ["updated_at", "2020-03-07 19:01:12.729421"], ["mbta_id", "Green-D"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Green Line E"], ["created_at", "2020-03-07 19:01:12.733795"], ["updated_at", "2020-03-07 19:01:12.733795"], ["mbta_id", "Green-E"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at", "mbta_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Blue Line"], ["created_at", "2020-03-07 19:01:12.738749"], ["updated_at", "2020-03-07 19:01:12.738749"], ["mbta_id", "Blue"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 580ms (Views: 380.1ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/routes" for ::1 at 2020-03-07 14:01:16 -0500
+Processing by RoutesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Red"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Mattapan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Orange"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-B"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-C"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-D"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Green-E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoute Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "routes" WHERE "routes"."mbta_id" = $1 LIMIT $2[0m  [["mbta_id", "Blue"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 194ms (Views: 45.6ms | ActiveRecord: 13.8ms)
+
+
