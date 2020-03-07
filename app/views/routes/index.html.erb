@@ -13,3 +13,17 @@
 <%= @fewest.name %> - <%= @fewest.stops.size %> stops
 
 <h2>Stops that connect two or more subway routes</h2>
+
+<ul>
+    <% Stop.with_connections.each do |stop| %>
+        <li>
+            <%= stop.name + ":" %>
+            <ul>
+                <% stop.routes[0..-2].each do |r| %>
+                    <%= r.name + ", " %>
+                <% end %>
+                <%= stop.routes[-1].name %>
+            </ul>
+        </li>
+    <% end %>
+</ul>
