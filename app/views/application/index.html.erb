@@ -4,10 +4,10 @@
 <%= form_with(url: root_path, method: "get", local: true) do %>
 
   <%= label_tag(:first_stop, "Search for:") %>
-  <%= collection_select(:stop_1, :stop_id, Stop.all, :id, :name) %>
+  <%= collection_select(:stop_1, :stop_id, Stop.all.sort_by{ |s| s.name }, :id, :name) %>
 
   <%= label_tag(:first_stop, "to:") %>  
-  <%= collection_select(:stop_2, :stop_id, Stop.all, :id, :name) %>
+  <%= collection_select(:stop_2, :stop_id, Stop.all.sort_by{ |s| s.name }, :id, :name) %>
 
   <%= submit_tag("Search") %>
 <% end %>
