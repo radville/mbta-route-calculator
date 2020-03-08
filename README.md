@@ -1,11 +1,7 @@
 # README
 
-This application retrieves data from the MBTA API. 
+This application retrieves data from the MBTA service API (https://api-v3.mbta.com/docs/swagger/index.html). 
 
-Created in Ruby 2.6.1. 
-
-### Decisions
-To see all MBTA light rail and heavy rail routes, go to localhost:3000/routes. I pull only these two types of routes when I make the request from https://api-v3.mbta.com/routes?filter[type]=0,1. Without filtering the request, it pulls more data than is necessary for this application.
 
 ### Installing & Using the Application
 
@@ -25,7 +21,13 @@ To get a development environment running:
 
 
 
+### Decisions
+If this is the first time cloning and installing the project, you must first go to `localhost:3000/routes` to fetch route data from the MBTA API. To see all MBTA light rail and heavy rail routes, go to localhost:3000/routes. The request is made from `https://api-v3.mbta.com/routes?filter[type]=0,1` in order to only get data for these two rail types. Without filtering the request, it pulls more data than is necessary for this application.
+
+
 ## Built With
+
+* Ruby 2.6.1
 
 * [Ruby on Rails](https://rubyonrails.org/) - The web framework used
 
