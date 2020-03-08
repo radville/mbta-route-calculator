@@ -45,6 +45,7 @@ class Route < ApplicationRecord
         self.all.sort_by{ |route| route.stops.length }[-1]
     end
 
+    # Calculate Route with fewest stops
     def self.fewest
         self.all.sort_by{ |route| route.stops.length }[0]
     end

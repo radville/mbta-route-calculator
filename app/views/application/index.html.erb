@@ -1,10 +1,18 @@
 <header>Find the routes that connect two stops</header>
+<br>
 
+<%= form_with(url: root_path, method: "get", local: true) do %>
 
-<%= form_with(url: "/search", method: "get") do %>
   <%= label_tag(:first_stop, "Search for:") %>
   <%= collection_select(:stop_1, :stop_id, Stop.all, :id, :name) %>
+
   <%= label_tag(:first_stop, "to:") %>  
   <%= collection_select(:stop_2, :stop_id, Stop.all, :id, :name) %>
+
   <%= submit_tag("Search") %>
+<% end %>
+<br>
+
+<% if params["stop_1"] %>
+  <%= Stop.display_connections(params) %>
 <% end %>
