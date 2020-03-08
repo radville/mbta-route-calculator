@@ -13,11 +13,13 @@ To get a development environment running:
 
 3. Create and initialize the postgres database by running `rails db:create` and then `rails db:migrate`
 
-4. Load the development site by entering `rails s` in the terminal. 
+4. Test models with `rspec spec/models/route_spec.rb` and `run with rspec spec/models/stop_spec.rb`
 
-5. To display Light Rail and Heavy Rail routes, the route with the most stops, and the route with the fewest stops, navigate to `localhost:3000/routes`. When using the app for the first time, navigate to this page first to populate the database.
+5. Load the development site by entering `rails s` in the terminal. 
 
-6. Next, to calculate routes between stops, go to `http://localhost:3000`.
+6. To display Light Rail and Heavy Rail routes, the route with the most stops, and the route with the fewest stops, navigate to `localhost:3000/routes`. When using the app for the first time, navigate to this page first to populate the database.
+
+7. Next, to calculate routes between stops, go to `http://localhost:3000`.
 
 
 
