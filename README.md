@@ -1,6 +1,6 @@
 # README
 
-This application retrieves data from the MBTA service API (https://api-v3.mbta.com/docs/swagger/index.html). 
+This application retrieves data from the [MBTA service API] (https://api-v3.mbta.com/docs/swagger/index.html). 
 
 
 ### Installing & Using the Application
