@@ -1,13 +1,13 @@
 # README
 
-This application retrieves data from the MBTA API and displays it at localhost:3000.
+This application retrieves data from the MBTA API. 
 
 Created in Ruby 2.6.1. 
 
 ### Decisions
-To see all MBTA light rail and heavy rail routes, go to localhost:3000/routes. I pull only these two types of routes when I make the request from https://api-v3.mbta.com/routes?filter[type]=0,1. Without filtering the request, it pulls much more data than is necessary for this application.
+To see all MBTA light rail and heavy rail routes, go to localhost:3000/routes. I pull only these two types of routes when I make the request from https://api-v3.mbta.com/routes?filter[type]=0,1. Without filtering the request, it pulls more data than is necessary for this application.
 
-### Installing
+### Installing & Using the Application
 
 To get a development environment running:
 
@@ -17,7 +17,11 @@ To get a development environment running:
 
 3. Create and initialize the postgres database by running `rails db:create` and then `rails db:migrate`
 
-4. Load the development site by entering `rails s` in the terminal. Navigate to `http://localhost:3000` to view the website.
+4. Load the development site by entering `rails s` in the terminal. 
+
+5. To display Light Rail and Heavy Rail routes, the route with the most stops, and the route with the fewest stops, navigate to `localhost:3000/routes`. When using the app for the first time, navigate to this page first to populate the database.
+
+6. Next, to calculate routes between stops, go to `http://localhost:3000`.
 
 
 
