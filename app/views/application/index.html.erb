@@ -9,6 +9,9 @@
   <%= label_tag(:first_stop, "to:") %>  
   <%= collection_select(:stop_2, :stop_id, Stop.all.sort_by{ |s| s.name }, :id, :name) %>
 
+  <%= label_tag(:line_out, "line is out!") %>  
+  <%= collection_select(:route, :route_id, Route.all.sort_by{ |r| r.name }, :id, :name) %>
+
   <%= submit_tag("Search") %>
 <% end %>
 <br>
